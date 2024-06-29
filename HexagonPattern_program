@@ -1,0 +1,30 @@
+def printHexagonRowTopLayer(column):
+    for i in range(1,column,2):
+        print(" ___ ",end="")
+        print("   ",end="")
+    print(" ___ ")
+    
+    
+def printHexagonRowMiddleLayer(column):
+    for i in range(1,column,2):
+        print("/   \\",end="")
+        print("___",end="")
+    print("/   \\")
+    
+
+def printHexagonRowBottomLayer(column):
+    for i in range(1,column,2):
+        print("\\___/",end="")
+        print("   ",end="")
+    print("\\___/")
+    
+   
+def generateHexagonDiagram(row,column):
+    printHexagonRowTopLayer(column)
+    for i in range(row):
+        printHexagonRowMiddleLayer(column)
+        printHexagonRowBottomLayer(column)
+        
+
+generateHexagonDiagram(3,5)
+generateHexagonDiagram(4,7)
